@@ -3,12 +3,37 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{E9808A57-5E5A-4F2D-A039-0F1482A9149B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Catalog", "Catalog", "{F2E7DDFB-9C16-4F6A-9697-B803EF0400B9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Catalog.API", "Services\Catalog\Catalog.API\Catalog.API.csproj", "{4B31AEF3-19CB-48D1-8CAC-0FBCEE0D8C31}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BuildingBlocks", "BuildingBlocks", "{EA8D8C00-860E-4519-82DC-8D6EB86A589A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuildingBlocks", "BuildingBlocks\BuildingBlocks\BuildingBlocks.csproj", "{71B5E799-4CA4-4777-B6A9-8C86704AEA12}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4B31AEF3-19CB-48D1-8CAC-0FBCEE0D8C31}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4B31AEF3-19CB-48D1-8CAC-0FBCEE0D8C31}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4B31AEF3-19CB-48D1-8CAC-0FBCEE0D8C31}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4B31AEF3-19CB-48D1-8CAC-0FBCEE0D8C31}.Release|Any CPU.Build.0 = Release|Any CPU
+		{71B5E799-4CA4-4777-B6A9-8C86704AEA12}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{71B5E799-4CA4-4777-B6A9-8C86704AEA12}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{71B5E799-4CA4-4777-B6A9-8C86704AEA12}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{71B5E799-4CA4-4777-B6A9-8C86704AEA12}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F2E7DDFB-9C16-4F6A-9697-B803EF0400B9} = {E9808A57-5E5A-4F2D-A039-0F1482A9149B}
+		{4B31AEF3-19CB-48D1-8CAC-0FBCEE0D8C31} = {F2E7DDFB-9C16-4F6A-9697-B803EF0400B9}
+		{71B5E799-4CA4-4777-B6A9-8C86704AEA12} = {EA8D8C00-860E-4519-82DC-8D6EB86A589A}
 	EndGlobalSection
 EndGlobal
