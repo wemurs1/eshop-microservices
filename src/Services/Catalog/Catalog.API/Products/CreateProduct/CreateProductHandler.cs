@@ -4,16 +4,20 @@ public record CreateProductCommand(string Name, List<string> Category, string De
     : ICommand<CreateProductResult>;
 public record CreateProductResult(Guid Id);
 
-internal class CreateProductCommandHandler(IDocumentSession session) : ICommandHandler<CreateProductCommand, CreateProductResult>
+internal class CreateProductCommandHandler
+    (IDocumentSession session, ILogger<CreateProductCommandHandler> logger)
+    : ICommandHandler<CreateProductCommand, CreateProductResult>
 {
     public async Task<CreateProductResult> Handle(CreateProductCommand command, CancellationToken cancellationToken)
     {
+        logger.LogInformation("UpdateProductCommandHandler.Handle called with {$Command}", command);
+
         var product = new Product
         {
             Name = command.Name,
             Category = command.Category,
             Description = command.Description,
-            ImageFIle = command.ImageFile,
+            ImageFile = command.ImageFile,
             Price = command.Price,
         };
 
