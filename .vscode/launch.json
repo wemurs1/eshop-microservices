@@ -25,9 +25,9 @@
             "request": "launch",
             "preLaunchTask": "build",
             // If you have changed target frameworks, make sure to update the program path.
-            "program": "${workspaceFolder}/src/Services/Basket/Basket.API/bin/Debug/net8.0/Basket.API.dll",
+            "program": "${workspaceFolder}/src/Services/Discount/Discount.Grpc/bin/Debug/net8.0/Discount.Grpc.dll",
             "args": [],
-            "cwd": "${workspaceFolder}/src/Services/Basket/Basket.API",
+            "cwd": "${workspaceFolder}/src/Services/Discount/Discount.Grpc",
             "stopAtEntry": false,
             // Enable launching a web browser when ASP.NET Core starts. For more information: https://aka.ms/VSCode-CS-LaunchJson-WebBrowser
             "serverReadyAction": {
