@@ -4,6 +4,7 @@
     <TargetFramework>net8.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>8dcf9c74-4040-4c6e-a8be-d2ac318dec43</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
@@ -12,10 +13,12 @@
 
   <ItemGroup>
     <PackageReference Include="Grpc.AspNetCore" Version="2.66.0" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Services/" />
+    <PackageReference Include="Grpc.AspNetCore.Server.Reflection" Version="2.66.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="8.0.10" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.10">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
   </ItemGroup>
 
 </Project>
