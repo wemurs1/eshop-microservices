@@ -44,7 +44,8 @@ public class OrderConfiguration : IEntityTypeConfiguration<Order>
         });
         builder.Property(o => o.Status)
             .HasDefaultValue(OrderStatus.Draft)
+            .HasSentinel(OrderStatus.Error)
             .HasConversion(s => s.ToString(), dbStatus => (OrderStatus)Enum.Parse(typeof(OrderStatus), dbStatus));
-        builder.Property(o => o.TotalPrice);
+        builder.Property(o => o.TotalPrice).HasPrecision(28, 6);
     }
 }

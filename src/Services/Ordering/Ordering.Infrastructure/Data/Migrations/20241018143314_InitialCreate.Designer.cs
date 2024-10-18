@@ -13,7 +13,7 @@ using Ordering.Infrastructure.Data;
 namespace Ordering.Infrastructure.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20241018135423_InitialCreate")]
+    [Migration("20241018143314_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -88,7 +88,8 @@ namespace Ordering.Infrastructure.Data.Migrations
                         .HasDefaultValue("Draft");
 
                     b.Property<decimal>("TotalPrice")
-                        .HasColumnType("decimal(18,2)");
+                        .HasPrecision(28, 6)
+                        .HasColumnType("decimal(28,6)");
 
                     b.ComplexProperty<Dictionary<string, object>>("BillingAddress", "Ordering.Domain.Models.Order.BillingAddress#Address", b1 =>
                         {
@@ -234,7 +235,8 @@ namespace Ordering.Infrastructure.Data.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<decimal>("Price")
-                        .HasColumnType("decimal(18,2)");
+                        .HasPrecision(28, 6)
+                        .HasColumnType("decimal(28,6)");
 
                     b.Property<Guid>("ProductId")
                         .HasColumnType("uniqueidentifier");
@@ -274,7 +276,8 @@ namespace Ordering.Infrastructure.Data.Migrations
                         .HasColumnType("nvarchar(100)");
 
                     b.Property<decimal>("Price")
-                        .HasColumnType("decimal(18,2)");
+                        .HasPrecision(28, 6)
+                        .HasColumnType("decimal(28,6)");
 
                     b.HasKey("Id");
 
