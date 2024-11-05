@@ -42,7 +42,7 @@ services:
 
   messagebroker:
     container_name: messagebroker
-    hostname: ecommerce-mssql
+    hostname: ecommerce-mq
     environment:
       - RABBITMQ_DEFAULT_USER=guest
       - RABBITMQ_DEFAULT_PASS=guest
