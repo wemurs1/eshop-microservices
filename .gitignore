@@ -402,3 +402,4 @@ src/Services/Basket/Basket.API/appsettings.json
 src/Services/Discount/Discount.Grpc/appsettings.json
 src/Services/Ordering/Ordering.API/appsettings.json
 # src/ApiGateways/YarpApiGateway/appsettings.json - safe as no secrets
+src/WebApps/Shopping.Web/appsettings.json
