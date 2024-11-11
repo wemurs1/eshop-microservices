@@ -1,5 +1,6 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,24 +13,27 @@
     <link href="~/css/style.css" rel="stylesheet" type="text/css">
 
 </head>
+
 <body>
     <header>
 
         <nav class="navbar navbar-expand-md navbar-dark bg-dark">
             <div class="container">
                 <a class="navbar-brand" asp-area="" asp-page="/Index">AspnetRunBasics</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
+                    aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
                 <div class="collapse navbar-collapse justify-content-end" id="navbarsExampleDefault">
                     <ul class="navbar-nav m-auto">
                         <li class="nav-item active">
-                            <a class="nav-link" asp-area="" asp-page="/Index">Home <span class="sr-only">(current)</span></a>
+                            <a class="nav-link" asp-area="" asp-page="/Index">Home <span
+                                    class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" asp-area="" asp-page="/Product">Product</a>
-                        </li>                        
+                            <a class="nav-link" asp-area="" asp-page="/ProductList">Product</a>
+                        </li>
                         <li class="nav-item">
                             <a class="nav-link" asp-area="" asp-page="/Cart">Cart</a>
                         </li>
@@ -77,7 +81,8 @@
                     <h5>About</h5>
                     <hr class="bg-white mb-2 mt-0 d-inline-block mx-auto w-25">
                     <p class="mb-0">
-                        Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression.
+                        Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant
+                        impression.
                     </p>
                 </div>
 
@@ -117,7 +122,9 @@
                     <p class="float-left">
                         <a href="#">Back to top</a>
                     </p>
-                    <p class="text-right text-muted">created with <i class="fa fa-heart"></i> by <a href="https://t-php.fr/43-theme-ecommerce-bootstrap-4.html"><i>t-php</i></a> | <span>v. 1.0</span></p>
+                    <p class="text-right text-muted">created with <i class="fa fa-heart"></i> by <a
+                            href="https://t-php.fr/43-theme-ecommerce-bootstrap-4.html"><i>t-php</i></a> | <span>v.
+                            1.0</span></p>
                 </div>
             </div>
         </div>
@@ -148,31 +155,30 @@
 
         });
 
-      // Example starter JavaScript for disabling form submissions if there are invalid fields
-      (function() {
-        'use strict';
+        // Example starter JavaScript for disabling form submissions if there are invalid fields
+        (function () {
+            'use strict';
 
-        window.addEventListener('load', function() {
-          // Fetch all the forms we want to apply custom Bootstrap validation styles to
-          var forms = document.getElementsByClassName('needs-validation');
+            window.addEventListener('load', function () {
+                // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                var forms = document.getElementsByClassName('needs-validation');
 
-          // Loop over them and prevent submission
-          var validation = Array.prototype.filter.call(forms, function(form) {
-            form.addEventListener('submit', function(event) {
-              if (form.checkValidity() === false) {
-                event.preventDefault();
-                event.stopPropagation();
-              }
-              form.classList.add('was-validated');
+                // Loop over them and prevent submission
+                var validation = Array.prototype.filter.call(forms, function (form) {
+                    form.addEventListener('submit', function (event) {
+                        if (form.checkValidity() === false) {
+                            event.preventDefault();
+                            event.stopPropagation();
+                        }
+                        form.classList.add('was-validated');
+                    }, false);
+                });
             }, false);
-          });
-        }, false);
         })();
 
     </script>
 
     @RenderSection("Scripts", required: false)
 </body>
+
 </html>
-
-
